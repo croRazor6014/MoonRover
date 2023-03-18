@@ -2,11 +2,14 @@ package org.example.moonrover.model;
 
 import lombok.Data;
 
+/**
+ *  created by lovro.vrlec@gmail.com on Mar,2023
+ */
 @Data
 public class Coordinates {
-    Integer objectX;
-    Integer objectY;
-    Direction direction;
+    private Integer objectX;
+    private Integer objectY;
+    private Direction direction;
 
     /**
      * @param objectX

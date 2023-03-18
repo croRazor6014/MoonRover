@@ -91,7 +91,7 @@
 
                         <!-- apply a specific flavor of google-java-format and reflow long strings -->
                         <googleJavaFormat>
-                            <version>1.17</version>
+                            <version>1.16.0</version>
                             <style>AOSP</style>
                             <reflowLongStrings>true</reflowLongStrings>
                         </googleJavaFormat>

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 /**
- *
+ *  created by lovro.vrlec@gmail.com on Mar,2023
  */
 @Service
 @Slf4j
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 public class TableTopService {
     TableTop tableTop;
 
-    public TableTopService( @Value("${tabletop.y}") int configX,
+    public TableTopService( @Value("${tabletop.x}") int configX,
                             @Value("${tabletop.y}") int configY){
         tableTop = new TableTop(configX,configY);
     }
