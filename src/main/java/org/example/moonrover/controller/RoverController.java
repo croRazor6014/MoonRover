@@ -38,7 +38,8 @@ public class RoverController {
             @ApiResponse(responseCode = "404", description = "Rover not found",
                     content = @Content) })
     @PostMapping("api/rover/place")
-    public ResponseEntity<Coordinates> place(@RequestBody Coordinates request) throws ObjectAlreadyExistsException, OutsideBoundsException {
+    public ResponseEntity<Coordinates> place(@RequestBody Coordinates request)
+            throws ObjectAlreadyExistsException, OutsideBoundsException {
 
 
         tableTopService.placeRover(request);

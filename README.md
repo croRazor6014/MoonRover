@@ -1,6 +1,12 @@
-- [ ] create API Design
-- [ ] create Model for Api Data
-- [ ] create integration tests for controller
-- [ ] create REST Controller
-- [ ] define tabletop service
-- [ ] create integration tests that test the border of tabletop  
+The purpose of this application is to guide a rover 
+over a small area defined in the configuration application.properties
+
+To facilitate this there are 4 main REST API calls:
+
+POST /api/rover/move
+
+GET /api/rover/report
+
+POST /api/rover/place
+
+POST /api/rover/turn
