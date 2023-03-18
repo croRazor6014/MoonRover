@@ -19,11 +19,17 @@ public class Rover extends TableTopObject{
         this.setDirection(coordinates.getDirection());
     }
 
+    /**
+     * @return
+     */
     public Coordinates getCurrentPosition(){
-
         return new Coordinates(getObjectX(),getObjectY(),direction);
     }
 
+    /**
+     *
+     * @return
+     */
     public Coordinates getMoveNextPosition(){
         if(direction.equals(Direction.East)){
             return new Coordinates(

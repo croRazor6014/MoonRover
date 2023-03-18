@@ -14,8 +14,8 @@ public class TableTop {
     private int maxY;
 
     /**
-     * @param dimensionX
-     * @param dimensionY
+     * @param dimensionX width of the tabletop
+     * @param dimensionY height of the tabletop
      */
     public TableTop(int dimensionX, int dimensionY){
         this.tableTop = new TableTopObject[dimensionX][dimensionY];
@@ -25,9 +25,10 @@ public class TableTop {
 
 
     /**
-     * @param object
-     * @param coordinates
-     * @throws ObjectAlreadyExistsException
+     * @param object places the object in this case a Rover object on the tabletop
+     * @param coordinates the coordinates of the rover to be placed on the tabletop
+     * @throws ObjectAlreadyExistsException if an object occupies already that position
+     *                                      and if it is not that very same rover an exception is thrown
      */
     public void placeRover(Rover object, Coordinates coordinates) throws ObjectAlreadyExistsException {
         if(tableTop[coordinates.getObjectX()][coordinates.getObjectY()] == null) {
@@ -39,10 +40,7 @@ public class TableTop {
                 rover.setTableTop(this);
             }
             tableTop[coordinates.getObjectX()][coordinates.getObjectY()] = object;
-
             rover.setPosition(coordinates);
-
-
         } else {
             if(!tableTop[coordinates.getObjectX()][coordinates.getObjectY()].equals(rover)) {
                 throw new ObjectAlreadyExistsException();

@@ -54,7 +54,8 @@ public class MoonRoverPlaceAndMoveIT {
                         .content( mapper.writeValueAsString(coordinatesPlace))
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk()).andExpect(content().json(mapper.writeValueAsString(endPlace)));
+                .andExpect(status().isOk())
+                .andExpect(content().json(mapper.writeValueAsString(endPlace)));
     }
 
     @Test
@@ -82,7 +83,8 @@ public class MoonRoverPlaceAndMoveIT {
                         .content( mapper.writeValueAsString(coordinatesPlace))
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk()).andExpect(content().json(mapper.writeValueAsString(endPlace)));
+                .andExpect(status().isOk())
+                .andExpect(content().json(mapper.writeValueAsString(endPlace)));
     }
 
     @Test
@@ -110,7 +112,8 @@ public class MoonRoverPlaceAndMoveIT {
                         .content( mapper.writeValueAsString(coordinatesPlace))
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk()).andExpect(content().json(mapper.writeValueAsString(endPlace)));
+                .andExpect(status().isOk())
+                .andExpect(content().json(mapper.writeValueAsString(endPlace)));
     }
 
     @Test
@@ -138,7 +141,8 @@ public class MoonRoverPlaceAndMoveIT {
                         .content( mapper.writeValueAsString(coordinatesPlace))
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk()).andExpect(content().json(mapper.writeValueAsString(endPlace)));
+               .andExpect(status().isOk())
+               .andExpect(content().json(mapper.writeValueAsString(endPlace)));
     }
 
 }

@@ -23,9 +23,9 @@ public class TableTopService {
     }
 
     /**
-     * @param coordinates
-     * @throws ObjectAlreadyExistsException
-     * @throws OutsideBoundsException
+     * @param coordinates coordinates of new Rover placement
+     * @throws ObjectAlreadyExistsException if an object already occupies that position
+     * @throws OutsideBoundsException if the coordinates are outside the bounds of the tabletop
      */
     public void placeRover(Coordinates coordinates) throws ObjectAlreadyExistsException, OutsideBoundsException {
         if (isValidCoordinates(coordinates,tableTop)) {
