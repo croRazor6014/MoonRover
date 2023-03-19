@@ -1,4 +1,8 @@
-# **Moon Rover**
+
+<p align="left">
+<img src="presentation/Title.PNG" width="800" height="400" border="10"/>
+</p>
+
 ## an ICE coding challenge
 The purpose of this application is to guide a rover 
 over a small area defined in the configuration application.properties
