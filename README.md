@@ -17,28 +17,28 @@ To facilitate this there are 4 main REST API calls:
 <th>Result</th>
 </tr>
 <tr>
-    <td>GET</td>
+    <td><label class="pill-get">GET</label></td>
     <td>/api/rover/report</td>
     <td> </td>
     <td> </td>
     <td> </td>
 </tr>
 <tr>
-    <td>POST</td>
+    <td><label class="pill-post">POST</label></td>
     <td>/api/rover/place</td>
     <td> </td>
     <td> </td>
     <td> </td>
 </tr>
 <tr>
-    <td>POST</td>
+    <td><label class="pill-post">POST</label></td>
     <td>/api/rover/move</td>
     <td> </td>
     <td> </td>
     <td> </td>
 </tr>
 <tr>
-    <td>POST</td>
+    <td><label class="pill-post">POST</label></td>
     <td>/api/rover/turn</td>
     <td> </td>
     <td> </td>
@@ -57,3 +57,30 @@ To facilitate this there are 4 main REST API calls:
 <p align="left">
 <img src="presentation/ballCaptured.PNG" width="200" height="200" border="10"/>
 </p>
+
+<style>
+.pill-get {
+  background-color: #43d738;
+  border: none;
+  color: black;
+  padding: 3px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.pill-post {
+  background-color: #3e63ea;
+  border: none;
+  color: black;
+  padding: 2px 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+</style>
