@@ -61,7 +61,7 @@ public class RoverController {
         return ResponseEntity.ok().body("rotated "+tableTopService.rotateRover(request));
     }
 
-    @Operation(summary = "Places rover on tabletop")
+    @Operation(summary = "Moves rover on tabletop in rover direction")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Rover moved forward one step on tabletop",
                     content = { @Content(mediaType = "application/json",
@@ -77,7 +77,7 @@ public class RoverController {
     }
 
 
-    @Operation(summary = "Places rover on tabletop")
+    @Operation(summary = "Rover reports its current location on tabletop")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Rover placed on tabletop",
                     content = { @Content(mediaType = "application/json",
