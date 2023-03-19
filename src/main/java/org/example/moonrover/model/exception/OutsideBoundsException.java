@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class OutsideBoundsException extends Exception{
 
     public OutsideBoundsException() {
-        super("Outside Bounds Exception");
+        super("Invalid tabletop position supplied");
     }
 }

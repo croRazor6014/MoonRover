@@ -11,7 +11,7 @@ public class Rover extends TableTopObject{
     private Direction direction;
 
     /**
-     * @param coordinates
+     * @param coordinates to be placed
      */
     public void setPosition(Coordinates coordinates){
         this.setObjectX(coordinates.getObjectX());
@@ -20,7 +20,7 @@ public class Rover extends TableTopObject{
     }
 
     /**
-     * @return
+     * @return coordinateds and facing of the rover
      */
     public Coordinates getCurrentPosition(){
         return new Coordinates(getObjectX(),getObjectY(),direction);
@@ -28,7 +28,7 @@ public class Rover extends TableTopObject{
 
     /**
      *
-     * @return
+     * @return coordinates after moving one spot
      */
     public Coordinates getMoveNextPosition(){
         if(direction.equals(Direction.East)){

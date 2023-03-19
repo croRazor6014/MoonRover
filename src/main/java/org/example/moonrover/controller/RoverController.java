@@ -11,6 +11,7 @@ import org.example.moonrover.model.Coordinates;
 import org.example.moonrover.model.Rotation;
 import org.example.moonrover.model.exception.ObjectAlreadyExistsException;
 import org.example.moonrover.model.exception.OutsideBoundsException;
+import org.example.moonrover.model.exception.RoverNotFoundException;
 import org.example.moonrover.service.TableTopService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,13 +36,13 @@ public class RoverController {
                             schema = @Schema(implementation = Coordinates.class)) }),
             @ApiResponse(responseCode = "400", description = "Invalid tabletop position supplied",
                     content = @Content),
-            @ApiResponse(responseCode = "404", description = "Rover not found",
-                    content = @Content) })
+            @ApiResponse(responseCode = "400", description = "Object Already Exists Exception",
+                    content = @Content),
+            @ApiResponse(responseCode = "400", description = "Outside Bounds Exception",
+                    content = @Content)})
     @PostMapping("api/rover/place")
     public ResponseEntity<Coordinates> place(@RequestBody Coordinates request)
             throws ObjectAlreadyExistsException, OutsideBoundsException {
-
-
         tableTopService.placeRover(request);
         return ResponseEntity.ok(request);
 
@@ -57,7 +58,7 @@ public class RoverController {
             @ApiResponse(responseCode = "404", description = "Rover not found",
                     content = @Content) })
     @PostMapping("api/rover/turn")
-    public ResponseEntity<String> turn(@RequestBody Rotation request){
+    public ResponseEntity<String> turn(@RequestBody Rotation request) throws RoverNotFoundException {
         return ResponseEntity.ok().body("rotated "+tableTopService.rotateRover(request));
     }
 
@@ -66,12 +67,10 @@ public class RoverController {
             @ApiResponse(responseCode = "200", description = "Rover moved forward one step on tabletop",
                     content = { @Content(mediaType = "application/json",
                             schema = @Schema(implementation = String.class)) }),
-            @ApiResponse(responseCode = "400", description = "Rover unable to move in that direction",
-                    content = @Content),
             @ApiResponse(responseCode = "404", description = "Rover not found",
                     content = @Content) })
     @PostMapping("api/rover/move")
-    public ResponseEntity<String> move() throws ObjectAlreadyExistsException {
+    public ResponseEntity<String> move() throws ObjectAlreadyExistsException, RoverNotFoundException {
         return ResponseEntity.ok().body("moved "+tableTopService.moveRover());
 
     }
@@ -87,7 +86,7 @@ public class RoverController {
             @ApiResponse(responseCode = "404", description = "Rover not found",
                     content = @Content) })
     @GetMapping("api/rover/report")
-    public ResponseEntity<Coordinates> report(){
+    public ResponseEntity<Coordinates> report() throws RoverNotFoundException {
         return ResponseEntity.ok().body(tableTopService.reportRover());
 
     }

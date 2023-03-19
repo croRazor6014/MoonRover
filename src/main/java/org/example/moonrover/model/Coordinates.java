@@ -12,9 +12,9 @@ public class Coordinates {
     private Direction direction;
 
     /**
-     * @param objectX
-     * @param objectY
-     * @param direction
+     * @param objectX x-axis placement of object
+     * @param objectY y-axis placement of object
+     * @param direction direction we want the object to be faced to
      */
     public Coordinates(Integer objectX, Integer objectY, Direction direction) {
         this.objectX=objectX;

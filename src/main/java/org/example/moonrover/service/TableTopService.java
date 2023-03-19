@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.moonrover.model.*;
 import org.example.moonrover.model.exception.ObjectAlreadyExistsException;
 import org.example.moonrover.model.exception.OutsideBoundsException;
+import org.example.moonrover.model.exception.RoverNotFoundException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
@@ -30,7 +31,6 @@ public class TableTopService {
     public void placeRover(Coordinates coordinates) throws ObjectAlreadyExistsException, OutsideBoundsException {
         if (isValidCoordinates(coordinates,tableTop)) {
 
-            //TODO refactor
             if (tableTop.getRover() == null) {
                 Rover rover = new Rover();
                 this.tableTop.placeRover(rover, coordinates);
@@ -45,29 +45,36 @@ public class TableTopService {
     /**
      * @return Coordinates of the rovers position
      */
-    public Coordinates reportRover(){
-        Rover rover = this.tableTop.getRover();
-        return rover.getCurrentPosition();
+    public Coordinates reportRover() throws RoverNotFoundException {
+        if (tableTop.getRover() == null){
+            throw new RoverNotFoundException();
+        }
+        return this.tableTop.getRover().getCurrentPosition();
+
     }
 
     /**
      * @return moves Rover in the facing direction by one place
      * @throws ObjectAlreadyExistsException in case there is an obstacle
      */
-    public Direction moveRover() throws ObjectAlreadyExistsException {
-        Rover rover = this.tableTop.getRover();
-        this.tableTop.placeRover(rover,rover.getMoveNextPosition());
-        return rover.getDirection();
+    public Direction moveRover() throws ObjectAlreadyExistsException, RoverNotFoundException {
+        if (tableTop.getRover() == null){
+            throw new RoverNotFoundException();
+        }
+        this.tableTop.placeRover(this.tableTop.getRover(),this.tableTop.getRover().getMoveNextPosition());
+        return this.tableTop.getRover().getDirection();
     }
 
     /**
      * @param rotation direction of the Rover rotation
      * @return Direction of the rover after the rotation
      */
-    public Direction rotateRover(Rotation rotation){
-        Rover rover = this.tableTop.getRover();
-        rover.setDirection(rover.getDirection().nextDirection(rotation));
-        return rover.getDirection();
+    public Direction rotateRover(Rotation rotation) throws RoverNotFoundException {
+        if (tableTop.getRover() == null){
+            throw new RoverNotFoundException();
+        }
+        tableTop.getRover().setDirection(tableTop.getRover().getDirection().nextDirection(rotation));
+        return tableTop.getRover().getDirection();
     }
 
     /**
