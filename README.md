@@ -1,6 +1,11 @@
 The purpose of this application is to guide a rover 
 over a small area defined in the configuration application.properties
 
+
+
+<p align="left">
+<img src="presentation/KerbalRover.png" width="200" height="200" border="10"/>
+</p>
 To facilitate this there are 4 main REST API calls:
 
 <table>
@@ -42,11 +47,11 @@ To facilitate this there are 4 main REST API calls:
 </table>
 
 <p align="left">
-<img src="presentation/ballCaptured.PNG" width="200" height="200" border="10"/>
+<img src="presentation/coordinateSystem.PNG" width="200" height="200" border="10"/>
 </p>
 
 <p align="left">
-<img src="presentation/ballCaptured.PNG" width="200" height="200" border="10"/>
+<img src="presentation/ballFallOff.PNG" width="200" height="200" border="10"/>
 </p>
 
 <p align="left">
