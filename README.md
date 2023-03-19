@@ -38,11 +38,7 @@ To facilitate this there are 4 main REST API calls:
     <td> </td>
 </tr>
 <tr>
-    <td><label 
-        style="background-color: #3e63ea;
-        color: black;
-        padding: 2px 7px;
-        border-radius: 16px;">POST</label></td>
+    <td>`POST`</td>
     <td>/api/rover/turn</td>
     <td> </td>
     <td> </td>
@@ -62,29 +58,3 @@ To facilitate this there are 4 main REST API calls:
 <img src="presentation/ballCaptured.PNG" width="200" height="200" border="10"/>
 </p>
 
-<style style="visibility:hidden">
-.pill-get {
-  background-color: #43d738;
-  border: none;
-  color: black;
-  padding: 3px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 16px;
-}
-.pill-post {
-  background-color: #3e63ea;
-  border: none;
-  color: black;
-  padding: 2px 7px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 16px;
-}
-</style>
