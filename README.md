@@ -1,6 +1,6 @@
 
 <p align="left">
-<img src="presentation/Title.PNG" width="800" height="400" border="10"/>
+<img src="presentation/Title.PNG" width="319" height="111" border="10"/>
 </p>
 
 ## an ICE coding challenge
