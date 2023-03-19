@@ -38,7 +38,11 @@ To facilitate this there are 4 main REST API calls:
     <td> </td>
 </tr>
 <tr>
-    <td><label class="pill-post">POST</label></td>
+    <td><label 
+        style="background-color: #3e63ea;
+        color: black;
+        padding: 2px 7px;
+        border-radius: 16px;">POST</label></td>
     <td>/api/rover/turn</td>
     <td> </td>
     <td> </td>
