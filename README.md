@@ -3,10 +3,52 @@ over a small area defined in the configuration application.properties
 
 To facilitate this there are 4 main REST API calls:
 
-POST /api/rover/move
+<table>
+<tr>
+<th>Method</th>
+<th>Api</th>
+<th>Description</th>
+<th>Payload</th>
+<th>Result</th>
+</tr>
+<tr>
+    <td>GET</td>
+    <td>/api/rover/report</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+</tr>
+<tr>
+    <td>POST</td>
+    <td>/api/rover/place</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+</tr>
+<tr>
+    <td>POST</td>
+    <td>/api/rover/move</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+</tr>
+<tr>
+    <td>POST</td>
+    <td>/api/rover/turn</td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+</tr>
+</table>
 
-GET /api/rover/report
+<p align="left">
+<img src="presentation/ballCaptured.PNG" width="200" height="200" border="10"/>
+</p>
 
-POST /api/rover/place
+<p align="left">
+<img src="presentation/ballCaptured.PNG" width="200" height="200" border="10"/>
+</p>
 
-POST /api/rover/turn
+<p align="left">
+<img src="presentation/ballCaptured.PNG" width="200" height="200" border="10"/>
+</p>
