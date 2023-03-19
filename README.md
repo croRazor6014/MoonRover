@@ -3,7 +3,7 @@
 <img src="presentation/Title.PNG" width="319" height="111" border="10"/>
 </p>
 
-## an ICE coding challenge
+## ICE coding challenge
 The purpose of this application is to guide a rover 
 over a small area defined in the configuration application.properties
 
