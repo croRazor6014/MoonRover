@@ -47,7 +47,7 @@ To facilitate this there are 4 main REST API calls:
 </table>
 
 <p align="left">
-<img src="presentation/coordinateSystem.PNG" width="200" height="200" border="10"/>
+<img src="presentation/coordinateSystem.PNG" width="400" height="400" border="10"/>
 </p>
 
 <p align="left">
