@@ -58,7 +58,7 @@ To facilitate this there are 4 main REST API calls:
 <img src="presentation/ballCaptured.PNG" width="200" height="200" border="10"/>
 </p>
 
-<style>
+<style style="visibility:hidden">
 .pill-get {
   background-color: #43d738;
   border: none;
