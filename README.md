@@ -36,5 +36,5 @@ is explained in the corresponding presentation in regards to the error handling.
  The solution also consists of integration tests that verify and document the usage of the application. 
 
 <p align="left">
-<img src="presentation/CodeCoverage.PNG.PNG" width="600" height="500" border="10"/>
+<img src="presentation/CodeCoverage.PNG"  border="10"/>
 </p>
