@@ -1,6 +1,6 @@
 
 <p align="left">
-<img src="presentation/Title.PNG" width="319" height="111" border="10"/>
+<img src="presentation/Title.PNG" width="520" height="160" border="10"/>
 </p>
 
 ## ICE coding challenge
@@ -30,11 +30,12 @@ The task at hand requires 4 main API calls:
 <img src="presentation/report.PNG" width="890" height="75" border="10"/>
 </p>
 
-The methodologies and rerasoning of the implementation 
-is explained in the corresponding presentation in regards to the error handling.
+The methodologies and reasoning of the implementation 
+is explained in more detail in the presentation (e.g. error handling).
 
- The solution also consists of integration tests that verify and document the usage of the application. 
- The level of the coverage is the folllowing: 
+## Code Coverage
+The solution also includes integration tests that verify and document the usage of the application. <br>
+The level of the coverage is the following: 
 
 <p align="left">
 <img src="presentation/CodeCoverage.PNG"  border="10"/>
