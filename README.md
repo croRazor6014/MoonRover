@@ -30,4 +30,8 @@ The task at hand requires 4 main API calls:
 <img src="presentation/report.PNG" width="890" height="75" border="10"/>
 </p>
 
+The methodologies and rerasoning of the implementation 
+is explained in the corresponding presentation in regards to the error handling.
+
+ The solution also consists of integration tests that verify and document the usage of the application. 
 
