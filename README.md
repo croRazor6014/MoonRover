@@ -1,10 +1,6 @@
 The task:
-Create a small application and design a REST API with the following prerequisites. We will ask you
-also to present your solution to us to emulate a code and design review session. Think about how
-you would do it in front of a small group and prepare your presentation accordingly. Think about
-how you would convince other people of your approaches. Presentation is an important part of the
-assignment because we look at how you articulate your thoughts. Use the tools of your choice to
-present your solution.
+Create a small application and design a REST API with the following prerequisites
+
 Problem details:
 • The application is a simulation of a moon rover moving on a square tabletop, of dimensions
 5x5 units
@@ -12,6 +8,7 @@ Problem details:
 • The rover should be able to be placed on the tabletop, it has coordinates and facing, which
 shows where the rover is and in which direction the rover can move. The rover can turn on
 the spot and its facing changes accordingly
+
 • The rover is free to roam around the surface of the tabletop but must be prevented from
 falling to destruction. Any movement that would result in the rover falling from the tabletop
 must be prevented, however further valid movement commands must still be allowed.

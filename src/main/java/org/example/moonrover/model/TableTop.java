@@ -25,24 +25,24 @@ public class TableTop {
 
 
     /**
-     * @param object places the object in this case a Rover object on the tabletop
+     * @param rover places the object in this case a Rover object on the tabletop
      * @param coordinates the coordinates of the rover to be placed on the tabletop
      * @throws ObjectAlreadyExistsException if an object occupies already that position
      *                                      and if it is not that very same rover an exception is thrown
      */
-    public void placeRover(Rover object, Coordinates coordinates) throws ObjectAlreadyExistsException {
+    public void placeRover(Rover rover, Coordinates coordinates) throws ObjectAlreadyExistsException {
         if(tableTop[coordinates.getObjectX()][coordinates.getObjectY()] == null) {
             if(this.rover != null){
-                tableTop[rover.getObjectX()][rover.getObjectY()] = null;
+                tableTop[this.rover.getObjectX()][this.rover.getObjectY()] = null;
             }
             else {
-                rover = object;
-                rover.setTableTop(this);
+                this.rover = rover;
+                this.rover.setTableTop(this);
             }
-            tableTop[coordinates.getObjectX()][coordinates.getObjectY()] = object;
-            rover.setPosition(coordinates);
+            tableTop[coordinates.getObjectX()][coordinates.getObjectY()] = rover;
+            this.rover.setPosition(coordinates);
         } else {
-            if(!tableTop[coordinates.getObjectX()][coordinates.getObjectY()].equals(rover)) {
+            if(!tableTop[coordinates.getObjectX()][coordinates.getObjectY()].equals(this.rover)) {
                 throw new ObjectAlreadyExistsException();
             }
         }
